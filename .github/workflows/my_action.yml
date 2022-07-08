@@ -1,0 +1,9 @@
+on:
+  push:
+
+jobs:
+  my_action:
+    name: my actions
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_ENV
