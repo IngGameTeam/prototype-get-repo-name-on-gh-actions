@@ -8,4 +8,4 @@ jobs:
     steps:
       - run: |
           echo "REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_ENV
-          printf $REPO_NAME
+          printf "Value: %s" $REPO_NAME
