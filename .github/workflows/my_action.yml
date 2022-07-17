@@ -7,6 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_ENV
-          printf "Value: %s" ${{github.workspace}}
-          ls ${{github.workspace}}
+          echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
